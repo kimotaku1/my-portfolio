@@ -4,7 +4,7 @@ import currency from '../assets/currency.png'
 import weather from '../assets/weather.png'
 import project5_img from '../assets/project_5.svg'
 import project6_img from '../assets/project_6.svg'
-
+//haha
 const mywork_data = [
     {
         w_no:1,
