@@ -1,4 +1,4 @@
-import youtubeclone from '../assets/youtubeclone.png'
+import youtubeClone from '../assets/youtubeClone.png'
 import chatApp from '../assets/chatApp.png'
 import currency from '../assets/currency.png'
 import weather from '../assets/weather.png'
@@ -9,7 +9,7 @@ const mywork_data = [
     {
         w_no:1,
         w_name:"YouTube Clone",
-        w_img:youtubeclone,
+        w_img:youtubeClone,
         w_description: "video-sharing platform featuring an API that allows users to view, and share videos.",
         w_link:"https://github.com/kimotaku1/Youtube-Clone"
     },
