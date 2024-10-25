@@ -15,7 +15,7 @@ const Services = () => {
       </div>
       <section id="experience" className="relative w-full">
         <div className="flex flex-col items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-10">
             {/* Frontend Development */}
             <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-50 p-10 px-20 rounded-3xl">
               <h2 className="text-gray-300 font-semibold text-xl lg:text-3xl mb-6 text-center">
