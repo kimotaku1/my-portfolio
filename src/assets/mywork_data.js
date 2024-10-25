@@ -1,7 +1,7 @@
-import youtubeClone from '../assets/youtubeClone.png'
+import youtubeclone from '../assets/youtubeclone.png'
 import chatApp from '../assets/chatApp.png'
-import project3_img from '../assets/project_3.svg'
-import project4_img from '../assets/project_4.svg'
+import currency from '../assets/currency.png'
+import weather from '../assets/weather.png'
 import project5_img from '../assets/project_5.svg'
 import project6_img from '../assets/project_6.svg'
 
@@ -9,7 +9,7 @@ const mywork_data = [
     {
         w_no:1,
         w_name:"YouTube Clone",
-        w_img:youtubeClone,
+        w_img:youtubeclone,
         w_description: "video-sharing platform featuring an API that allows users to view, and share videos.",
         w_link:"https://github.com/kimotaku1/Youtube-Clone"
     },
@@ -22,13 +22,17 @@ const mywork_data = [
     },
     {
         w_no:3,
-        w_name:"Web design",
-        w_img:project3_img
+        w_name:"Currency Converter",
+        w_img:currency,
+        w_description: "user-friendly currency converter app that allows users to easily convert between different currencies in real time.",
+        w_link:"https://github.com/kimotaku1/currency-converter"
     },
     {
         w_no:4,
-        w_name:"Web design",
-        w_img:project4_img
+        w_name:"Weather App",
+        w_img:weather,
+        w_description: "A sleek and intuitive weather app that provides real-time weather updates and forecasts for any location around the globe.",
+        w_link:"https://github.com/kimotaku1/weather-app"
     },
     {
         w_no:5,
