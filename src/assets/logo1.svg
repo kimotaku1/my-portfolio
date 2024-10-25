@@ -1,27 +1,32 @@
 <svg width="250" height="100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradient definition for stylish glow -->
+    <!-- Gradient with animation for color shift -->
     <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8A2BE2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#4B0082;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#8A2BE2;" />
+      <stop offset="50%" style="stop-color:#6A0DAD;" />
+      <stop offset="100%" style="stop-color:#4B0082;" />
+      <animate attributeName="x1" values="0%;100%;0%" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;0%;100%" dur="5s" repeatCount="indefinite" />
     </linearGradient>
-    <!-- Drop shadow filter for neon glow effect -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+    
+    <!-- Pulsing Glow Filter -->
+    <filter id="pulsingGlow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
       </feMerge>
+      <animate attributeName="stdDeviation" values="2;4;2" dur="2s" repeatCount="indefinite" />
     </filter>
   </defs>
   
-  <!-- Neon glow effect with gradient and shadow -->
-  <text x="10" y="60" font-family="Arial" font-size="45" fill="url(#gradient)" font-weight="bold" filter="url(#glow)">
+  <!-- Main Text with Animated Gradient and Pulsing Glow -->
+  <text x="10" y="60" font-family="Arial" font-size="42" fill="url(#gradient)" font-weight="bold" filter="url(#pulsingGlow)" stroke="white" stroke-width="0.5">
     Bibek
   </text>
 
-  <!-- 3D shadow effect -->
-  <text x="12" y="62" font-family="Arial" font-size="45" fill="none" stroke="black" stroke-width="1.5" opacity="0.3">
+  <!-- Enhanced 3D Shadow for Depth -->
+  <text x="12" y="63" font-family="Arial" font-size="42" fill="none" stroke="black" stroke-width="1.6" opacity="0.35">
     Bibek
   </text>
 </svg>

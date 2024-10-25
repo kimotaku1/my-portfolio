@@ -7,11 +7,11 @@ const Services = () => {
   return (
     <div
       id="experience"
-      className="flex flex-col items-start lg:items-center lg:gap-20 justify-center gap-10 mx-10 md:mx-10 lg:mx-40 my-10"
+      className="flex flex-col items-start md:items-center lg:items-center lg:gap-20 justify-center gap-10 mx-10 md:mx-10 lg:mx-40 my-10"
     >
       <div className="flex flex-col">
-        <p className="text-lg lg:text-xl font-semibold text-gray-500 text-center">Explore My</p>
-        <h1 className="text-4xl lg:text-5xl font-bold">Experience</h1>
+        <p className="text-lg ml-5 lg:text-xl font-semibold text-gray-500 text-left md:text-center lg:text-center">Explore My</p>
+        <h1 className="text-4xl ml-5 lg:text-5xl font-bold">Experience</h1>
       </div>
       <section id="experience" className="relative w-full">
         <div className="flex flex-col items-center">

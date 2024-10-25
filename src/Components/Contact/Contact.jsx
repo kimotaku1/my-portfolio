@@ -34,7 +34,7 @@ const Contact = () => {
       className="flex flex-col items-center justify-center gap-10 lg:gap-20 mx-40 my-20"
     >
       <div className="">
-        <h1 className="text-4xl md:text-5xl font-semibold px-6 w-80 left-0">Get in touch</h1>
+        <h1 className="text-4xl md:text-5xl font-semibold w-80">Get in touch</h1>
       </div>
       <div className="flex flex-col md:flex-row gap-20 w-screen px-7 lg:w-auto">
         <div className="flex flex-col gap-8 mx-5">
@@ -99,14 +99,14 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="flex flex-col gap-6 mx-5">
+        <form onSubmit={onSubmit} className="flex flex-col gap-6 mx-5 md:mx-10">
           <label className="text-gray-300 text-lg font-medium">Your Name</label>
           <input
             type="text"
             required={true}
             placeholder="Enter your name"
             name="name"
-            className="w-full md:w-[700px] h-16 px-4 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
+            className="w-full md:w-[350px] lg:w-[700px] h-16 px-4 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
           />
           <label className="text-gray-300 text-lg font-medium">
             Your Email
@@ -116,7 +116,7 @@ const Contact = () => {
             required={true}
             placeholder="Enter your email"
             name="email"
-            className="w-full md:w-[700px] h-16 px-4 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
+            className="w-full md:w-[350px] lg:w-[700px] h-16 px-4 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
           />
           <label className="text-gray-300 text-lg font-medium">
             Write your message here
@@ -126,7 +126,7 @@ const Contact = () => {
             required={true}
             rows="8"
             placeholder="Enter your message"
-            className="w-full md:w-[650px] p-6 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
+            className="w-full md:w-[320px] lg:w-[650px] p-6 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
           ></textarea>
           <button
             type="submit"

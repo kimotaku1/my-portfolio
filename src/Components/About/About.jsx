@@ -5,10 +5,10 @@ const About = () => {
   return (
     <div
       id="about"
-      className="flex flex-col items-start lg:items-center justify-center lg:gap-20 gap-10 mx-4 md:mx-10 lg:mx-40 my-20"
+      className="flex flex-col items-start md:items-center lg:items-center justify-center lg:gap-20 gap-10 mx-4 md:mx-10 lg:mx-40 my-20"
     >
       <div className="relative">
-        <h1 className="px-4 md:px-8 text-4xl md:text-5xl font-semibold">
+        <h1 className="px-4 ml-5 md:px-8 text-4xl md:text-5xl font-semibold">
           About Me
         </h1>
       </div>
@@ -53,10 +53,10 @@ const About = () => {
           index === 0
             ? "w-2/3 lg:w-2/3"
             : index === 1
-            ? "w-1/2 lg:w-1/2"
+            ? "w-2/5 md:w-1/2 lg:w-1/2"
             : index === 2
             ? "w-3/4 lg:w-3/4"
-            : "w-1/3 lg:w-1/2"
+            : "w-2/5 md:w-1/2 lg:w-1/2"
         } 
         ml-0 sm:ml-4`}
                   />

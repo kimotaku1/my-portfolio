@@ -7,7 +7,7 @@ const MyWork = () => {
   return (
     <div
       id="project"
-      className="flex flex-col items-start lg:items-center justify-center gap-10 lg:gap-20 mx-4 md:mx-20 lg:mx-40 my-20"
+      className="flex flex-col items-start md:items-center lg:items-center justify-center gap-10 lg:gap-20 mx-4 md:mx-20 lg:mx-40 my-20"
     >
       <div className="relative">
         <h1 className="text-4xl md:text-5xl font-medium px-8 text-start">
