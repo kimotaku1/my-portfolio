@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className="relative flex items-center justify-between px-4 lg:px-20 py-6 mx-1"
+      className="relative flex items-center justify-between px-4 lg:px-20 lg:py-2 mx-1"
     >
       <AnchorLink href="#navbar">
         <img src={logo1} alt="logo" />
