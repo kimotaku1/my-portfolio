@@ -2,7 +2,7 @@ import youtubeClone from '../assets/youtubeClone.png'
 import chatApp from '../assets/chatApp.png'
 import currency from '../assets/currency.png'
 import weather from '../assets/weather.png'
-import project5_img from '../assets/project_5.svg'
+import forever from '../assets/forever.png'
 import project6_img from '../assets/project_6.svg'
 //haha
 const mywork_data = [
@@ -36,8 +36,10 @@ const mywork_data = [
     },
     {
         w_no:5,
-        w_name:"Web design",
-        w_img:project5_img
+        w_name:"E-Commerce Site",
+        w_img:forever,
+        w_description: "An interactive online store designed to provide a seamless shopping experience. This project features dynamic product listings with detailed.",
+        w_link:"https://github.com/kimotaku1/e-commerce-forever"
     },
     {
         w_no:6,
