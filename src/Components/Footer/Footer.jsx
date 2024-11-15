@@ -35,24 +35,6 @@ const Footer = () => {
             chat about gaming strategies.
           </p>
         </div>
-        <div className="flex items-center gap-4 lg:w-1/2 mt-8 lg:mt-0 justify-end">
-          <div className="flex items-center bg-gray-800 rounded-full p-3 pl-5 w-full lg:w-auto">
-            <img src={user_icon} alt="User Icon" className="mr-4" />
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={handleEmailChange}
-              className="bg-transparent text-gray-400 focus:outline-none w-full"
-            />
-          </div>
-          <button
-            onClick={handleSubscribe}
-            className="w-40 py-3 bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] text-white text-lg font-medium rounded-full cursor-pointer transform hover:scale-105 transition-transform"
-          >
-            Subscribe
-          </button>
-        </div>
         {error && <p className="text-red-500">{error}</p>}
       </div>
       <hr className="border-gray-600" />

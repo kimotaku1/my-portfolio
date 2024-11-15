@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";  // Import Link from react-router-dom
 import profile_img from "../../assets/profile_img.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import resumeFile from '../../assets/Bibek_Bhandari_cv.pdf'
 
 const Hero = () => {
   return (
@@ -29,14 +29,15 @@ const Hero = () => {
             Connect With Me
           </AnchorLink>
         </div>
-        
-        {/* Use Link to navigate to the Resume page */}
-        <Link
-          to="/resume"
-          className="px-8 py-3 rounded-full border-2 border-white cursor-pointer hover:border-purple-500 transition-colors duration-300"
+
+        {/* Resume download button */}
+        <a
+          href={resumeFile} // Replace with your actual file path
+          download="Bibek_Bhandari_cv.pdf" // Suggested download file name
+          className="px-8 py-3 rounded-full border-2 border-white cursor-pointer hover:border-purple-500 transition-colors duration-300 text-center"
         >
-          My Resume
-        </Link>
+          Download CV
+        </a>
       </div>
     </div>
   );

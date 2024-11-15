@@ -8,7 +8,6 @@ import MyWork from './Components/MyWork/MyWork';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import './index.css';  // Assuming this file contains Tailwind directives
-import Resume from './pages/Resume';
 import ScrollToTop from './Components/ScrollToTop ';
 
 const App = () => {
@@ -31,9 +30,6 @@ const App = () => {
             </>
           }
         />
-
-        {/* Route for the Resume page */}
-        <Route path="/resume" element={<Resume />} />
       </Routes>
     </Router>
   );
