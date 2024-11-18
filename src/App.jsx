@@ -14,7 +14,7 @@ import ContactPage from './Components/Contact/ContactPage';
 
 const App = () => {
   return (
-    <Router basename="/portfolio-repo" >
+    <Router basename="/portfolio" >
       <Routes>
         {/* Route for the main homepage */}
         <Route
