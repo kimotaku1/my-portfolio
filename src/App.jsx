@@ -14,7 +14,7 @@ import ContactPage from './Components/Contact/ContactPage';
 
 const App = () => {
   return (
-    <Router basename="/portfolio" >
+    <Router basename="/bibek-portfolio" >
       <Routes>
         {/* Route for the main homepage */}
         <Route
