@@ -16,7 +16,7 @@ const Navbar = () => {
       className="relative flex items-center justify-between px-4 lg:px-20 lg:py-2 mx-1"
     >
       <AnchorLink href="#navbar">
-        <img src={logo1} alt="logo" />
+        <img src={logo1} alt="logo"/>
       </AnchorLink>
 
       {/* Mobile Menu Toggle */}

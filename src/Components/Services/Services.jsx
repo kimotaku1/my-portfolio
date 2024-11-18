@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <div
       id="experience"
-      className="flex flex-col items-start md:items-center lg:items-center lg:gap-20 justify-center gap-10 mx-10 md:mx-10 lg:mx-40 my-10"
+      className="flex flex-col items-start md:items-center lg:items-center lg:gap-20 justify-center gap-10 mx-10 md:mx-10 lg:mx-40 mt-0 sm:my-10"
     >
       <div className="flex flex-col">
         <p className="text-lg ml-5 lg:text-xl font-semibold text-gray-500 text-left md:text-center lg:text-center">Explore My</p>

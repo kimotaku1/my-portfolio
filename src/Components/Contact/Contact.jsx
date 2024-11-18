@@ -58,7 +58,7 @@ const Contact = () => {
         <h1 className="text-4xl md:text-5xl font-semibold w-80">Get in touch</h1>
       </div>
       <div className="flex flex-col md:flex-row gap-20 w-screen px-7 lg:w-auto">
-        <div className="flex flex-col gap-8 mx-5">
+        <div className="flex flex-col gap-8 mx-2">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] text-transparent bg-clip-text">
             Let's talk
           </h1>
@@ -120,7 +120,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="flex flex-col gap-6 mx-5 md:mx-10">
+        <form onSubmit={onSubmit} className="flex flex-col gap-6 mx-3 md:mx-10">
           <label className="text-gray-300 text-lg font-medium">Your Name</label>
           <input
             type="text" value={data.name} onChange={onChangeHandler}
