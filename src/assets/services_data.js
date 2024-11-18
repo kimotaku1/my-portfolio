@@ -33,7 +33,7 @@ export const frontend_data = [
 export const backend_data = [    //'', 'Node JS', 'Express JS', 'Git'
     {
         s_no:"01",
-        s_name:'PostgreSQL',
+        s_name:'MongoDB',
         s_type:"Basic"
     },
     {

@@ -1,7 +1,8 @@
 import React from "react";
 import mywork_data from "../../assets/mywork_data";
 import arrow_icon from "../../assets/arrow_icon.svg";
-import { BiCode} from "react-icons/bi";
+import { BiCode } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const MyWork = () => {
   return (
@@ -15,7 +16,7 @@ const MyWork = () => {
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 mx-5">
-        {mywork_data.map((work, index) => (
+        {mywork_data.slice(0, 6).map((work, index) => (
           <div
             key={index}
             className="flex flex-col justify-center gap-4 p-6 sm:p-8 md:p-10 border-2 border-white rounded-lg transition-all hover:scale-105 hover:border-purple-300 hover:bg-gradient-to-r from-[#4B0082] to-[#8A2BE2]"
@@ -42,10 +43,13 @@ const MyWork = () => {
           </div>
         ))}
       </div>
-      <div className="flex items-center gap-4 border-2 border-white rounded-full px-6 py-4 font-medium text-base cursor-pointer transition-all hover:gap-6 hover:bg-gray-800 mx-8">
+      <Link
+        to={"/project"}
+        className="flex items-center gap-4 border-2 border-white rounded-full px-6 py-4 font-medium text-base cursor-pointer transition-all hover:gap-6 hover:bg-gray-800 ml-5"
+      >
         <p>Show More</p>
         <img src={arrow_icon} alt="Arrow pointing right" className="w-4 h-4" />
-      </div>
+      </Link>
     </div>
   );
 };

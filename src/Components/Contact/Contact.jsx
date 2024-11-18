@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import mail_icon from "../../assets/mail_icon.svg";
 import location_icon from "../../assets/location_icon.svg";
 import call_icon from "../../assets/call_icon.svg";
 import { BiLogoLinkedin, BiLogoGithub, BiLogoInstagram } from "react-icons/bi";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+  const [data, setData]= useState({
+    name:"",
+    email:"",
+    message:"",
+  })
+  const onChangeHandler = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setData((data) => ({ ...data, [name]: value }));
+    console.log(data);
+  };
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -24,14 +37,22 @@ const Contact = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      alert(res.message);
+      // alert(res.message);
+      toast(res.message);
+      setData({
+        name:"",
+        email:"",
+        message:"",
+      })
     }
   };
 
   return (
+    <>
+    <ToastContainer theme="dark"/>
     <div
       id="contact"
-      className="flex flex-col items-center justify-center gap-10 lg:gap-20 mx-40 my-20"
+      className="flex flex-col items-center justify-center gap-10 lg:gap-20 mx-40 mt-20 mb-10 pb-5"
     >
       <div className="">
         <h1 className="text-4xl md:text-5xl font-semibold w-80">Get in touch</h1>
@@ -102,7 +123,7 @@ const Contact = () => {
         <form onSubmit={onSubmit} className="flex flex-col gap-6 mx-5 md:mx-10">
           <label className="text-gray-300 text-lg font-medium">Your Name</label>
           <input
-            type="text"
+            type="text" value={data.name} onChange={onChangeHandler}
             required={true}
             placeholder="Enter your name"
             name="name"
@@ -112,7 +133,7 @@ const Contact = () => {
             Your Email
           </label>
           <input
-            type="email"
+            type="email" value={data.email} onChange={onChangeHandler}
             required={true}
             placeholder="Enter your email"
             name="email"
@@ -122,7 +143,7 @@ const Contact = () => {
             Write your message here
           </label>
           <textarea
-            name="message"
+            name="message" value={data.message} onChange={onChangeHandler}
             required={true}
             rows="8"
             placeholder="Enter your message"
@@ -137,6 +158,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

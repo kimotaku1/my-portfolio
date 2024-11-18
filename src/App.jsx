@@ -9,6 +9,8 @@ import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import './index.css';  // Assuming this file contains Tailwind directives
 import ScrollToTop from './Components/ScrollToTop ';
+import Project from './Components/MyWork/Project';
+import ContactPage from './Components/Contact/ContactPage';
 
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
             </>
           }
         />
+        <Route path='/project' element={<Project/>}/>
+        <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
     </Router>
   );

@@ -3,7 +3,8 @@ import chatApp from '../assets/chatApp.png'
 import currency from '../assets/currency.png'
 import weather from '../assets/weather.png'
 import forever from '../assets/forever.png'
-import project6_img from '../assets/project_6.svg'
+import blog from '../assets/blog.png'
+import brainwave from '../assets/brainwave.png'
 //haha
 const mywork_data = [
     {
@@ -22,29 +23,38 @@ const mywork_data = [
     },
     {
         w_no:3,
-        w_name:"Currency Converter",
-        w_img:currency,
-        w_description: "user-friendly currency converter app that allows users to easily convert between different currencies in real time.",
-        w_link:"https://github.com/kimotaku1/currency-converter"
-    },
-    {
-        w_no:4,
         w_name:"Weather App",
         w_img:weather,
         w_description: "A sleek and intuitive weather app that provides real-time weather updates and forecasts for any location around the globe.",
         w_link:"https://github.com/kimotaku1/weather-app"
     },
     {
-        w_no:5,
+        w_no:4,
         w_name:"E-Commerce Site",
         w_img:forever,
         w_description: "An interactive online store designed to provide a seamless shopping experience. This project features dynamic product listings with detailed.",
         w_link:"https://github.com/kimotaku1/e-commerce-forever"
     },
     {
+        w_no:5,
+        w_name:"Next-Blog App",
+        w_img:blog,
+        w_description: "A robust and dynamic blog application built with Next.js, enabling users to create, edit, and manage blog posts effortlessly.",
+        w_link:"https://github.com/kimotaku1/next-blog-app"
+    },
+    {
         w_no:6,
-        w_name:"Web design",
-        w_img:project6_img
+        w_name:"BrainWave",
+        w_img:brainwave,
+        w_description: "An innovative web application designed to enhance productivity and creativity. Built with modern frameworks.",
+        w_link:"https://github.com/kimotaku1/brainwave-frontend"
+    },
+    {
+        w_no:7,
+        w_name:"Currency Converter",
+        w_img:currency,
+        w_description: "user-friendly currency converter app that allows users to easily convert between different currencies in real time.",
+        w_link:"https://github.com/kimotaku1/currency-converter"
     },
 ]
  
