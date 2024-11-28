@@ -5,6 +5,7 @@ import weather from '../assets/weather.png'
 import forever from '../assets/forever.png'
 import blog from '../assets/blog.png'
 import brainwave from '../assets/brainwave.png'
+import promptopia_img from '../assets/promptopia_img.png'
 //haha
 const mywork_data = [
     {
@@ -23,10 +24,10 @@ const mywork_data = [
     },
     {
         w_no:3,
-        w_name:"Weather App",
-        w_img:weather,
-        w_description: "A sleek and intuitive weather app that provides real-time weather updates and forecasts for any location around the globe.",
-        w_link:"https://github.com/kimotaku1/weather-app"
+        w_name:"Promptopia",
+        w_img:promptopia_img,
+        w_description: "An AI prompt-sharing platform with Next.js, enabling users to explore, create, and share prompts.",
+        w_link:"https://github.com/kimotaku1/project_promptopia"
     },
     {
         w_no:4,
@@ -55,6 +56,13 @@ const mywork_data = [
         w_img:currency,
         w_description: "user-friendly currency converter app that allows users to easily convert between different currencies in real time.",
         w_link:"https://github.com/kimotaku1/currency-converter"
+    },
+    {
+        w_no:8,
+        w_name:"Weather App",
+        w_img:weather,
+        w_description: "A sleek and intuitive weather app that provides real-time weather updates and forecasts for any location around the globe.",
+        w_link:"https://github.com/kimotaku1/weather-app"
     },
 ]
  
