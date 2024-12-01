@@ -18,7 +18,7 @@ const Project = () => {
       <div id="project" className="pb-10">
         <div className="relative">
           <h1 className="text-4xl md:text-5xl font-medium px-8 text-start sm:text-center ml-3 mt-5 mb-10 sm:mb-14 sm:mt-14 lg:mb-14 lg:mt-5">
-            My Latest Projects
+            My Projects
           </h1>
         </div>
         <div className="flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24">

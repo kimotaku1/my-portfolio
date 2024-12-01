@@ -6,6 +6,7 @@ import forever from '../assets/forever.png'
 import blog from '../assets/blog.png'
 import brainwave from '../assets/brainwave.png'
 import promptopia_img from '../assets/promptopia_img.png'
+import zentry_pic from '../assets/zentry_pic.png'
 //haha
 const mywork_data = [
     {
@@ -63,6 +64,13 @@ const mywork_data = [
         w_img:weather,
         w_description: "A sleek and intuitive weather app that provides real-time weather updates and forecasts for any location around the globe.",
         w_link:"https://github.com/kimotaku1/weather-app"
+    },
+    {
+        w_no:8,
+        w_name:"Zentry Frontend",
+        w_img:zentry_pic,
+        w_description: "Zentry aims to redefine gaming culture by creating an interconnected universe that blends gaming, social interactions, and economic opportunities. ",
+        w_link:"https://github.com/kimotaku1/zentry-frontend"
     },
 ]
  
