@@ -7,45 +7,29 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build  # ✅ This line should be indented under `build`
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3  # Updated to latest version
+        uses: actions/checkout@v3
 
       - name: Setup Node.js 20
-        uses: actions/setup-node@v3  # Updated to latest version
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Use Node.js 20
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm install  # Install dependencies using npm directly
+        run: npm install
 
       - name: Build project
-        run: npm run build  # Build the project
+        run: npm run build
+
+      - name: List build output
+        run: ls -la ./dist  # Or ./build for CRA
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3  # Updated to latest version
+        uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist  # Ensure this path matches your output directory
-
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3  # Updated to latest version
-        with:
-          name: production-files
-          path: ./dist
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # Ensure this matches your build output directory
+          path: ./dist  # Or ./build if using CRA
