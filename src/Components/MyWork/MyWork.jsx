@@ -1,56 +1,70 @@
-import React from "react";
+"use client";
+import React, { useState, useRef } from "react";
 import mywork_data from "../../assets/mywork_data";
-import arrow_icon from "../../assets/arrow_icon.svg";
-import { BiCode } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import ProjectTag from "./ProjectTag";
+import ProjectCard from "./ProjectCard";
+import { motion, useInView } from "framer-motion";
 
 const MyWork = () => {
+  const [tag, setTag] = useState("All");
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const handleTagChange = (newTag) => setTag(newTag);
+
+  const filteredWorks = mywork_data.filter((work) =>
+    work.tag?.includes(tag)
+  );
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
-    <div
-      id="project"
-      className="flex flex-col items-start md:items-center lg:items-center justify-center gap-10 lg:gap-20 mx-4 md:mx-20 lg:mx-40 my-20"
-    >
-      <div className="relative">
-        <h1 className="text-4xl md:text-5xl font-medium px-8 text-start">
-          My Latest Work
-        </h1>
+    <section id="mywork">
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+        My Projects
+      </h2>
+
+      <div className="text-white flex flex-row justify-center items-center gap-4 py-6">
+        <ProjectTag
+          onClick={handleTagChange}
+          name="All"
+          isSelected={tag === "All"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Web"
+          isSelected={tag === "Web"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Mobile"
+          isSelected={tag === "Mobile"}
+        />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 mx-5">
-        {mywork_data.slice(0, 6).map((work, index) => (
-          <div
+
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredWorks.map((work, index) => (
+          <motion.li
             key={index}
-            className="flex flex-col justify-center gap-4 p-6 sm:p-8 md:p-10 border-2 border-white rounded-lg transition-all hover:scale-105 hover:border-purple-300 hover:bg-gradient-to-r from-[#4B0082] to-[#8A2BE2]"
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
           >
-            <img
-              src={work.w_img}
-              alt={`Work ${index + 1}`} // Descriptive alt text
-              className="w-full h-auto rounded-lg max-w-[410px] transition-transform hover:scale-105 hover:border-2 hover:border-purple-500 hover:rounded-lg"
+            <ProjectCard
+              title={work.w_name}
+              description={work.w_description}
+              imgUrl={work.w_img}
+              gitUrl={work.w_link}
+              previewUrl={work.previewUrl}
             />
-            <h2 className="text-xl">{work.w_name}</h2>
-            <p className="text-gray-400">{work.w_description}</p>
-            <div className="flex-row w-2/4 justify-center items-center gap-2 border-2 border-solid px-5 py-3 rounded-full transition-all hover:scale-105 text-center">
-              <a
-                href={work.w_link || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Github Link"
-                className="flex flex-row"
-              >
-                <BiCode size={25} />
-                <span className="text-center">Github</span>
-              </a>
-            </div>
-          </div>
+          </motion.li>
         ))}
-      </div>
-      <Link
-        to={"/project"}
-        className="flex items-center gap-4 border-2 border-white rounded-full px-6 py-4 font-medium text-base cursor-pointer transition-all hover:gap-6 hover:bg-gray-800 ml-5"
-      >
-        <p>Show More</p>
-        <img src={arrow_icon} alt="Arrow pointing right" className="w-4 h-4" />
-      </Link>
-    </div>
+      </ul>
+    </section>
   );
 };
 

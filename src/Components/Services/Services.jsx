@@ -1,67 +1,74 @@
 import React from "react";
-import checkmarkIcon from "../../assets/checkmark.png";
-import {frontend_data, backend_data} from "../../assets/services_data";
-import checkmark from "../../assets/checkmark.svg"
+import checkmark from "../../assets/checkmark.svg";
+import { frontend_data, backend_data } from "../../assets/services_data";
 
 const Services = () => {
   return (
-    <div
+    <section
       id="experience"
-      className="flex flex-col items-start md:items-center lg:items-center lg:gap-20 justify-center gap-10 mx-10 md:mx-10 lg:mx-40 mt-0 sm:my-10"
+      className="py-16 px-4 sm:px-6 lg:px-16 max-w-7xl mx-auto text-white"
     >
-      <div className="flex flex-col">
-        <p className="text-lg ml-5 lg:text-xl font-semibold text-gray-500 text-left md:text-center lg:text-center">Explore My</p>
-        <h1 className="text-4xl ml-5 lg:text-5xl font-bold">Experience</h1>
+      {/* Section Header */}
+      <div className="text-left md:text-center mb-12">
+        <p className="text-lg font-semibold text-gray-400">Explore My</p>
+        <h2 className="text-4xl font-bold text-white">
+          Experience
+        </h2>
       </div>
-      <section id="experience" className="relative w-full">
-        <div className="flex flex-col items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-10">
-            {/* Frontend Development */}
-            <div className="flex flex-col justify-center items-center border-solid border-2 border-gray-50 p-10 px-20 rounded-3xl">
-              <h2 className="text-gray-300 font-semibold text-xl lg:text-3xl mb-6 text-center">
-                Frontend Development
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 gap-x-20">
-                {frontend_data.map((item, index) => (
-                  <article key={index} className="flex items-center gap-4 p-2 rounded-md shadow-md">
-                    <img
-                      src={checkmark}
-                      alt="Experience icon"
-                    />
-                    
-                    <div className="text-left">
-                      <h3 className="text-lg lg:text-xl">{item.s_name}</h3>
-                      <p className="text-base lg:text-base text-gray-400">{item.s_type}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
 
-            {/* Backend Development */}
-            <div className="flex flex-col items-center border-solid border-2 border-gray-50 p-10 px-20 rounded-3xl">
-              <h2 className="text-gray-300 font-semibold text-xl lg:text-3xl mb-6 text-center">
-                Backend Development
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 gap-x-20">
-                {backend_data.map((item, index) => (
-                  <article key={index} className="flex items-center gap-4 p-2 rounded-md shadow-md">
-                    <img
-                      src={checkmark}
-                      alt="Experience icon"
-                    />
-                    <div className="text-left">
-                      <h3 className="text-lg lg:text-xl">{item.s_name}</h3>
-                      <p className="text-base lg:text-base text-gray-400">{item.s_type}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Frontend Development */}
+        <div className="bg-[#1f1f1f] p-8 rounded-3xl border border-gray-700 shadow-md">
+          <h3 className="text-2xl font-semibold text-center mb-6 text-gray-300">
+            Frontend Development
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {frontend_data.map((item, index) => (
+              <article
+                key={index}
+                className="flex items-start gap-4 p-3 bg-[#2a2a2a] rounded-xl hover:shadow-lg transition-all"
+              >
+                <img
+                  src={checkmark}
+                  alt="Checkmark"
+                  className="w-5 h-5 mt-1"
+                />
+                <div>
+                  <h4 className="text-lg font-medium">{item.s_name}</h4>
+                  <p className="text-sm text-gray-400">{item.s_type}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
-      </section>
-    </div>
+
+        {/* Backend Development */}
+        <div className="bg-[#1f1f1f] p-8 rounded-3xl border border-gray-700 shadow-md">
+          <h3 className="text-2xl font-semibold text-center mb-6 text-gray-300">
+            Backend Development
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {backend_data.map((item, index) => (
+              <article
+                key={index}
+                className="flex items-start gap-4 p-3 bg-[#2a2a2a] rounded-xl hover:shadow-lg transition-all"
+              >
+                <img
+                  src={checkmark}
+                  alt="Checkmark"
+                  className="w-5 h-5 mt-1"
+                />
+                <div>
+                  <h4 className="text-lg font-medium">{item.s_name}</h4>
+                  <p className="text-sm text-gray-400">{item.s_type}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

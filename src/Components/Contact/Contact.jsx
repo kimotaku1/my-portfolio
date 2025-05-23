@@ -16,13 +16,12 @@ const Contact = () => {
 
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
-    setData((data) => ({ ...data, [name]: value }));
+    setData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    // Basic validation
     if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
       toast.error("All fields are required!");
       return;
@@ -33,6 +32,7 @@ const Contact = () => {
     }
 
     setLoading(true);
+
     const formData = new FormData(event.target);
     formData.append("access_key", "0d0817fe-fb5a-462a-922d-049db623bdd0");
 
@@ -52,11 +52,7 @@ const Contact = () => {
       const res = await response.json();
       if (res.success) {
         toast.success(res.message);
-        setData({
-          name: "",
-          email: "",
-          message: "",
-        });
+        setData({ name: "", email: "", message: "" });
       } else {
         toast.error("Submission failed. Please try again!");
       }
@@ -70,136 +66,106 @@ const Contact = () => {
   return (
     <>
       <ToastContainer theme="dark" />
-      <div
-        id="contact"
-        className="flex flex-col items-center justify-center gap-10 lg:gap-20 mx-6 md:mx-20 mt-20 mb-10 pb-5"
-      >
-        <div>
-          <h1 className="text-4xl md:text-5xl font-semibold w-80">Get in touch</h1>
-        </div>
-        <div className="flex flex-col md:flex-row gap-20 w-full px-5 lg:w-auto">
-          {/* Contact Information */}
-          <div className="flex flex-col gap-8 mx-2">
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] text-transparent bg-clip-text">
-              Let's talk
-            </h1>
-            <p className="max-w-lg text-gray-400 text-lg leading-relaxed">
-              I’m always excited to work on new projects, whether it’s building
-              a dynamic web app or exploring new tech innovations. If you’re
-              looking for a passionate developer to collaborate with, feel free
-              to reach out!
+      <section id="contact" className="relative py-20 pb-10 md:pb-20 px-2 md:px-5 max-w-7xl mx-auto">
+        {/* Background Glow */}
+        <div className="absolute top-1/2 -left-20 w-80 h-80 bg-purple-800/30 blur-3xl rounded-full -z-10"></div>
+
+        <h1 className="hidden md:flex md:justify-center text-4xl md:text-5xl font-bold text-white text-center mb-12">Get in touch</h1>
+
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-16">
+          {/* Info Section */}
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Let's Connect
+            </h2>
+            <p className="text-gray-400 text-base leading-relaxed mb-8">
+              I’m always excited to work on new projects, whether it’s building a dynamic web app or exploring new tech innovations. If you’re looking for a passionate developer to collaborate with, feel free to reach out!
             </p>
-            <div className="flex flex-col gap-8 text-gray-300 text-xl">
-              <div className="flex items-center gap-4">
-                <img src={mail_icon} alt="Email" className="w-6 h-6" />
-                <p>narutobibek000@gmail.com</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <img src={call_icon} alt="Call" className="w-6 h-6" />
-                <p>+977 9810121270</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <img src={location_icon} alt="Location" className="w-6 h-6" />
-                <p>Sunakothi, Lalitpur</p>
-              </div>
-              <div className="flex flex-col justify-start gap-3 mt-4 text-white">
-                <h2 className="text-gray-300 text-xl">Social:</h2>
-                <div className="flex gap-3">
-                  <a
-                    href="https://github.com/kimotaku1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub Profile"
-                    className="hover:text-blue-500"
-                  >
-                    <BiLogoGithub size={30} />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/yahallo.02/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram Profile"
-                    className="hover:text-blue-500"
-                  >
-                    <BiLogoInstagram size={30} />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/bibek-841246334/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn Profile"
-                    className="hover:text-blue-500"
-                  >
-                    <BiLogoLinkedin size={30} />
-                  </a>
-                </div>
+            <ul className="space-y-2 text-white text-base">
+              <li className="flex items-center gap-4">
+                <img src={mail_icon} alt="Email" className="w-5 h-5" />
+                <span>narutobibek000@gmail.com</span>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src={call_icon} alt="Phone" className="w-5 h-5" />
+                <span>+977 9810121270</span>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src={location_icon} alt="Location" className="w-5 h-5" />
+                <span>Sunakothi, Lalitpur</span>
+              </li>
+            </ul>
+            <div className="mt-6">
+              <h3 className="text-gray-300 mb-3 text-lg font-medium">Social:</h3>
+              <div className="flex gap-3">
+                <a href="https://github.com/kimotaku1" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-500 transition">
+                  <BiLogoGithub size={28} />
+                </a>
+                <a href="https://www.instagram.com/yahallo.02/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-500 transition">
+                  <BiLogoInstagram size={28} />
+                </a>
+                <a href="https://www.linkedin.com/in/bibek-841246334/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-500 transition">
+                  <BiLogoLinkedin size={28} />
+                </a>
               </div>
             </div>
           </div>
+
           {/* Contact Form */}
-          <form
-            onSubmit={onSubmit}
-            className="flex flex-col gap-6 mx-3 md:mx-10"
-          >
-            <label className="text-gray-300 text-lg font-medium" htmlFor="name">
-              Your Name
-            </label>
-            <input
-              type="text"
-              value={data.name}
-              onChange={onChangeHandler}
-              required
-              placeholder="Enter your name"
-              name="name"
-              id="name"
-              className="w-full md:w-[350px] lg:w-[700px] h-16 px-4 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
-            />
-            <label
-              className="text-gray-300 text-lg font-medium"
-              htmlFor="email"
-            >
-              Your Email
-            </label>
-            <input
-              type="email"
-              value={data.email}
-              onChange={onChangeHandler}
-              required
-              placeholder="Enter your email"
-              name="email"
-              id="email"
-              className="w-full md:w-[350px] lg:w-[700px] h-16 px-4 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
-            />
-            <label
-              className="text-gray-300 text-lg font-medium"
-              htmlFor="message"
-            >
-              Write your message here
-            </label>
-            <textarea
-              name="message"
-              value={data.message}
-              onChange={onChangeHandler}
-              required
-              rows="8"
-              placeholder="Enter your message"
-              id="message"
-              className="w-full md:w-[320px] lg:w-[650px] p-6 rounded-md bg-[#32323c] text-gray-400 text-lg focus:outline-none"
-            ></textarea>
+          <form onSubmit={onSubmit} className="flex-1 space-y-6 w-full">
+            <div>
+              <label htmlFor="name" className="block text-sm text-gray-300 mb-2">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={data.name}
+                onChange={onChangeHandler}
+                required
+                placeholder="Enter your name"
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-sm text-gray-300 mb-2">Your Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={data.email}
+                onChange={onChangeHandler}
+                required
+                placeholder="Enter your email"
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-sm text-gray-300 mb-2">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="3"
+                value={data.message}
+                onChange={onChangeHandler}
+                required
+                placeholder="Enter your message"
+                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-3"
+              ></textarea>
+            </div>
             <button
               type="submit"
               disabled={loading}
-              className={`w-48 py-3 ${
+              className={`w-fit sm:w-fit px-8 py-3 rounded-lg font-semibold text-white transition-transform ${
                 loading
                   ? "bg-gray-500 cursor-not-allowed"
-                  : "bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] transform hover:scale-105 transition-transform"
-              } text-white text-lg font-medium rounded-full mx-3`}
+                  : "bg-purple-600 hover:bg-primary-900"
+              }`}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
-      </div>
+      </section>
     </>
   );
 };

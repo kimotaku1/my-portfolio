@@ -23,14 +23,18 @@ const App = () => {
           path="/"
           element={
             <>
+            <main className="flex min-h-screen flex-col bg-[#121212]">
               <Navbar />
-              <Hero />
-              <About />
-              <Services />
-              <MyWork />
-              <Contact />
+              <div className="container mt-5 mx-auto px-12 py-4">
+                <Hero />
+                <About />
+                <Services />
+                <MyWork />
+                <Contact />
+              </div>
               <Footer />
               <ScrollToTop />
+              </main>
             </>
           }
         />
