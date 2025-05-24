@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 import { motion, useInView } from "framer-motion";
 
 const MyWork = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Recent");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
