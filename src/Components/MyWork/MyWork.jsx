@@ -23,11 +23,11 @@ const MyWork = () => {
 
   return (
     <section id="mywork">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="pl-5 md:ml-0 text-start md:text-center text-4xl font-bold text-white mt-4 mb-3 md:mb-10">
         My Projects
       </h2>
 
-      <div className="text-white flex flex-row justify-center items-center gap-4 py-6">
+      <div className="text-white flex flex-row justify-start md:justify-center items-center gap-4 py-6 px-2 md:px-0">
         <ProjectTag
           onClick={handleTagChange}
           name="Recent"
