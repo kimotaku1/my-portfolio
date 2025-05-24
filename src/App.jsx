@@ -25,7 +25,7 @@ const App = () => {
             <>
             <main className="flex min-h-screen flex-col bg-[#121212]">
               <Navbar />
-              <div className="container mt-5 mx-auto px-12 py-4">
+              <div className="container mt-5 mx-auto px-5 py-4">
                 <Hero />
                 <About />
                 <Services />

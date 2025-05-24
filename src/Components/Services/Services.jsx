@@ -6,10 +6,10 @@ const Services = () => {
   return (
     <section
       id="experience"
-      className="py-16 px-4 sm:px-6 lg:px-16 max-w-7xl mx-auto text-white"
+      className="py-16 px-2 sm:px-6 lg:px-16 max-w-7xl mx-auto text-white"
     >
       {/* Section Header */}
-      <div className="text-left md:text-center mb-12">
+      <div className="text-left md:text-center mb-12 pl-4 md:pl-0">
         <p className="text-lg font-semibold text-gray-400">Explore My</p>
         <h2 className="text-4xl font-bold text-white">
           Experience
