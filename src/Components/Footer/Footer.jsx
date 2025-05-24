@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="px-6 lg:px-32 py-12 bg-[#0f0f0f] text-gray-400 mt-20">
+    <footer className="px-6 lg:px-32 py-8 md:py-12 bg-[#0f0f0f] text-gray-400">
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
         <div className="flex flex-col lg:max-w-lg">
