@@ -10,21 +10,12 @@ import zentry_pic from "../assets/zentry_pic.png";
 
 const mywork_data = [
   {
-    w_img: youtubeClone,
-    w_name: "YouTube Clone",
+    w_img: zentry_pic,
+    w_name: "Zentry Frontend",
     w_description:
-      "video-sharing platform featuring an API that allows users to view, and share videos.A portfolio built with React and Tailwind CSS.",
-    w_link: "https://github.com/kimotaku1/Youtube-Clone",
-    tag: ["All", "Web"],
-    previewUrl: "/",
-  },
-  {
-    w_img: chatApp,
-    w_name: "Chat App",
-    w_description:
-      "real-time messaging application designed for users to connect through chat rooms and direct messaging.",
-    w_link: "https://github.com/kimotaku1/chat-app",
-    tag: ["All"],
+      "Zentry aims to redefine gaming culture by creating an interconnected universe that blends gaming, social interactions, and economic opportunities.",
+    w_link: "https://github.com/kimotaku1/zentry-frontend",
+    tag: ["All", "Recent"],
     previewUrl: "/",
   },
   {
@@ -33,7 +24,25 @@ const mywork_data = [
     w_description:
       "An AI prompt-sharing platform with Next.js, enabling users to explore, create, and share prompts.",
     w_link: "https://github.com/kimotaku1/project_promptopia",
-    tag: ["All", "Web"],
+    tag: ["All", "Recent"],
+    previewUrl: "/",
+  },
+  {
+    w_img: chatApp,
+    w_name: "Chat App",
+    w_description:
+    "real-time messaging application designed for users to connect through chat rooms and direct messaging.",
+    w_link: "https://github.com/kimotaku1/chat-app",
+    tag: ["All", "Recent"],
+    previewUrl: "/",
+  },
+  {
+    w_img: youtubeClone,
+    w_name: "YouTube Clone",
+    w_description:
+      "video-sharing platform featuring an API that allows users to view, and share videos.A portfolio built with React and Tailwind CSS.",
+    w_link: "https://github.com/kimotaku1/Youtube-Clone",
+    tag: ["All", "Recent"],
     previewUrl: "/",
   },
   {
@@ -42,7 +51,7 @@ const mywork_data = [
     w_description:
       "An interactive online store designed to provide a seamless shopping experience. This project features dynamic product listings with detailed.",
     w_link: "https://github.com/kimotaku1/Ecommerce-forever",
-    tag: ["All", "Web"],
+    tag: ["All", "Recent"],
     previewUrl: "/",
   },
   {
@@ -51,7 +60,7 @@ const mywork_data = [
     w_description:
       "A robust and dynamic blog application built with Next.js, enabling users to create, edit, and manage blog posts effortlessly.",
     w_link: "https://github.com/kimotaku1/next-blog-app",
-    tag: ["All", "Web"],
+    tag: ["All", "Recent"],
     previewUrl: "/",
   },
   {
@@ -81,15 +90,7 @@ const mywork_data = [
     tag: ["All", "Web"],
     previewUrl: "/",
   },
-  {
-    w_img: zentry_pic,
-    w_name: "Zentry Frontend",
-    w_description:
-      "Zentry aims to redefine gaming culture by creating an interconnected universe that blends gaming, social interactions, and economic opportunities.",
-    w_link: "https://github.com/kimotaku1/zentry-frontend",
-    tag: ["All", "Web"],
-    previewUrl: "/",
-  },
+  
 ];
 
 export default mywork_data;

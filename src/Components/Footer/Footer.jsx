@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo1 from "../../assets/logo1.svg";
+import logo1 from "../../assets/logo2.png";
 import {
   BiLogoLinkedin,
   BiLogoGithub,
@@ -26,12 +26,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="px-6 lg:px-32 py-8 md:py-12 bg-[#0f0f0f] text-gray-400">
+    <footer className="px-6 md:px-14 lg:px-18 py-8 md:py-12 bg-[#0f0f0f] text-gray-400">
       {/* Top Section */}
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
         <div className="flex flex-col lg:max-w-lg">
           <AnchorLink href="#navbar" offset={50} className="cursor-pointer">
-            <img src={logo1} alt="Logo" className="w-48 md:w-[300px] mb-4" />
+            <img src={logo1} alt="Logo" className="w-[100px] md:w-[150px] mb-4" />
           </AnchorLink>
           <p className="text-base">
             Let's connect and create something amazing together! Feel free to

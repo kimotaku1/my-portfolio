@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo1 from "../../assets/logo1.svg";
+import logo1 from "../../assets/logo1.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
@@ -19,9 +19,9 @@ const Navbar = () => {
   }, [menuOpen]);
 
   return (
-    <nav id="navbar" className="relative flex items-center justify-between px-4 lg:px-20 py-4 z-50">
+    <nav id="navbar" className="relative flex items-center justify-between px-7 md:px-16 lg:px-12 py-7 md:py-6 z-50">
       <AnchorLink href="#navbar">
-        <img src={logo1} alt="logo" className="w-[180px] md:w-[300px]" />
+        <img src={logo1} alt="logo" className="w-[100px] md:w-[150px]" />
       </AnchorLink>
 
       {/* Mobile Menu Toggle */}

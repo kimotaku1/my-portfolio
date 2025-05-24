@@ -30,19 +30,19 @@ const MyWork = () => {
       <div className="text-white flex flex-row justify-center items-center gap-4 py-6">
         <ProjectTag
           onClick={handleTagChange}
+          name="Recent"
+          isSelected={tag === "Recent"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
           name="All"
           isSelected={tag === "All"}
         />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
+        {/* <ProjectTag
           onClick={handleTagChange}
           name="Mobile"
           isSelected={tag === "Mobile"}
-        />
+        /> */}
       </div>
 
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
