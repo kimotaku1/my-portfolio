@@ -15,7 +15,7 @@ import ScrollToTopPage from "./Components/ScrollToTopPage";
 
 const App = () => {
   return (
-    <Router basename="/portfolio">
+    <Router>
       <ScrollToTopPage />
       <Routes>
         {/* Route for the main homepage */}
