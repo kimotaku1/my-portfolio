@@ -1,7 +1,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import profile_img from "../../assets/profile_img.jpg";
+import profile_img2 from "../../assets/profile_img2.jpg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import resumeFile from "../../assets/Bibek_Bhandari_cv.pdf";
 
@@ -18,7 +18,7 @@ const Hero = () => {
         >
           <div className="rounded-full bg-[#181818] w-[150px] h-[150px] md:w-[250px] md:h-[250px] lg:w-[400px] lg:h-[400px] relative overflow-hidden flex items-center justify-center shadow-lg">
             <img
-              src={profile_img}
+              src={profile_img2}
               alt="Profile"
               className="w-full h-full object-cover rounded-full"
             />
